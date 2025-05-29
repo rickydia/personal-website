@@ -8,7 +8,9 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import "./app.css";
+
+import css from "./styles.module.css";
+import { ThemeContext, Theme, THEME_LINK_ID } from "./theme";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -21,6 +23,7 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  { rel: "stylesheet", href: "/app/theme/dark.module.css", id: THEME_LINK_ID },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -32,7 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className={css.body}>
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -42,7 +45,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const setTheme = (theme: Theme) => {
+    const themeLink = document.getElementById(THEME_LINK_ID);
+    if (themeLink) {
+      themeLink.setAttribute("href", "/app/theme/" + theme + ".module.css");
+    }
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme: Theme.DARK, setTheme }}>
+      <Outlet />
+    </ThemeContext.Provider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
@@ -62,11 +76,11 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
+    <main className={css.main}>
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
+        <pre className={css.stack}>
           <code>{stack}</code>
         </pre>
       )}
