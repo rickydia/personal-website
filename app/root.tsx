@@ -12,6 +12,8 @@ import type { Route } from "./+types/root";
 
 import css from "./styles.module.css";
 import { ThemeContext, Theme, THEME_LINK_ID } from "./theme";
+import { useEffect } from "react";
+import { isValidTheme } from "./utils/isValidTheme";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -24,7 +26,7 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
-  { rel: "stylesheet", href: "/app/theme/dark.module.css", id: THEME_LINK_ID },
+  { rel: "stylesheet", href: "/themes/dark.css", id: THEME_LINK_ID },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -48,11 +50,19 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const setTheme = (theme: Theme) => {
+    localStorage.setItem("theme", theme);
     const themeLink = document.getElementById(THEME_LINK_ID);
     if (themeLink) {
-      themeLink.setAttribute("href", "/app/theme/" + theme + ".module.css");
+      themeLink.setAttribute("href", `/themes/${theme}.css`);
     }
   };
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme && isValidTheme(storedTheme)) {
+      setTheme(storedTheme);
+    }
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme: Theme.DARK, setTheme }}>
