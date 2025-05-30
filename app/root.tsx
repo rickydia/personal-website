@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { useEffect } from "react";
+import { useEffect, useState, useCallback } from "react";
 import {
   isRouteErrorResponse,
   Links,
@@ -13,10 +13,14 @@ import {
 import type { Route } from "./+types/root";
 
 import css from "./styles.module.css";
-import { ThemeContext, Theme, THEME_LINK_ID } from "./theme";
+import { ThemeContext, Theme, THEME_LOCAL_STORAGE_KEY } from "./theme";
+import { getThemeScript } from "./theme/init";
 import { isValidTheme } from "./utils/isValidTheme";
 
 export const links: Route.LinksFunction = () => [
+  /*
+   * Gets the fonts from Google Fonts
+   */
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -27,15 +31,30 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
-  { rel: "stylesheet", href: "/themes/dark.css", id: THEME_LINK_ID },
+  /*
+   * Gets the theme from the theme.css file
+   */
+  { rel: "stylesheet", href: "/themes/theme.css" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    /*
+     * Suppresses the EXPECTED hydration warnings.
+     *
+     * This is because we store which theme the user has selected in their
+     * localStorage. Since this is a client-side only state, we need to suppress
+     * the hydration warnings since the theme is set after the initial render.
+     */
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/*
+         * Sets the theme based on the user's preference or the theme they have
+         * selected in their localStorage.
+         */}
+        <script dangerouslySetInnerHTML={{ __html: getThemeScript() }} />
         <Meta />
         <Links />
         <SpeedInsights />
@@ -51,23 +70,40 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  const setTheme = (theme: Theme) => {
-    localStorage.setItem("theme", theme);
-    const themeLink = document.getElementById(THEME_LINK_ID);
-    if (themeLink) {
-      themeLink.setAttribute("href", `/themes/${theme}.css`);
+  /*
+   * Sets the default theme based firstly on the theme they have selected in
+   * their localStorage, and secondly on the user's preference.
+   */
+  const [theme, setThemeState] = useState<Theme>(() => {
+    if (typeof window === "undefined") {
+      return Theme.DARK;
     }
-  };
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
+    const storedTheme = localStorage.getItem(THEME_LOCAL_STORAGE_KEY);
     if (storedTheme && isValidTheme(storedTheme)) {
-      setTheme(storedTheme);
+      return storedTheme;
+    }
+    return window.matchMedia("(prefers-color-scheme: light)").matches
+      ? Theme.LIGHT
+      : Theme.DARK;
+  });
+
+  /*
+   * Sets the theme to the new theme and updates the localStorage and the
+   * data-theme attribute on the html element.
+   */
+  const setTheme = useCallback((newTheme: Theme) => {
+    setThemeState(newTheme);
+    if (typeof window !== "undefined") {
+      localStorage.setItem(THEME_LOCAL_STORAGE_KEY, newTheme);
+      document.documentElement.setAttribute(
+        "data-theme",
+        newTheme.toLowerCase()
+      );
     }
   }, []);
 
   return (
-    <ThemeContext.Provider value={{ theme: Theme.DARK, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       <Outlet />
     </ThemeContext.Provider>
   );
