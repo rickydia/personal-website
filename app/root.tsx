@@ -1,4 +1,6 @@
+import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { useEffect } from "react";
 import {
   isRouteErrorResponse,
   Links,
@@ -12,7 +14,6 @@ import type { Route } from "./+types/root";
 
 import css from "./styles.module.css";
 import { ThemeContext, Theme, THEME_LINK_ID } from "./theme";
-import { useEffect } from "react";
 import { isValidTheme } from "./utils/isValidTheme";
 
 export const links: Route.LinksFunction = () => [
@@ -38,6 +39,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
         <SpeedInsights />
+        <Analytics />
       </head>
       <body className={css.body}>
         {children}
