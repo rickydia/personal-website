@@ -130,11 +130,11 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className={css.main}>
+    <main>
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
-        <pre className={css.stack}>
+        <pre>
           <code>{stack}</code>
         </pre>
       )}
