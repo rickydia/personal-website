@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { useEffect, useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import {
   isRouteErrorResponse,
   Links,
@@ -12,9 +12,13 @@ import {
 
 import type { Route } from "./+types/root";
 
-import css from "./styles.module.css";
-import { ThemeContext, Theme, THEME_LOCAL_STORAGE_KEY } from "./theme";
-import { getThemeScript } from "./theme/init";
+import "./styles.module.css";
+import {
+  getThemeScript,
+  Theme,
+  ThemeContext,
+  THEME_LOCAL_STORAGE_KEY,
+} from "./theme";
 import { isValidTheme } from "./utils/isValidTheme";
 
 export const links: Route.LinksFunction = () => [
@@ -60,7 +64,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <SpeedInsights />
         <Analytics />
       </head>
-      <body className={css.body}>
+      <body>
         {children}
         <ScrollRestoration />
         <Scripts />

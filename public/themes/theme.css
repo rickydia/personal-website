@@ -1,11 +1,11 @@
 /* Default light theme */
 :root {
   /* Light theme variables (default) */
-  --theme-background: #ffffff;
+  --theme-background: #bdc2f9;
   --theme-foreground: #000000;
 }
 
 :root[data-theme="dark"] {
-  --theme-background: #000000;
+  --theme-background: #292a36;
   --theme-foreground: #ffffff;
 }
