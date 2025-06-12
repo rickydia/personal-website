@@ -1,11 +1,31 @@
-/* Default light theme */
 :root {
-  /* Light theme variables (default) */
+  /***************************************
+   * Shared app-wide variables
+   ***************************************/
+  --app-header-height: 100px;
+  --app-horizontal-padding: 40px;
+
+  /***************************************
+   * Light theme variables 
+   ***************************************/
   --theme-background: #bdc2f9;
-  --theme-foreground: #000000;
+  --theme-primary-text: #000000;
+  --theme-primary-text-hover: #e0c253;
+  --theme-outline: #7eb562;
+
+  --color-2: #7eb562;
+  --color-3: #bdc2f9;
 }
 
 :root[data-theme="dark"] {
+  /***************************************
+   * Dark theme variables
+   ***************************************/
   --theme-background: #292a36;
-  --theme-foreground: #ffffff;
+  --theme-primary-text: #ffffff;
+  --theme-primary-text-hover: #e0c253;
+  --theme-outline: #7eb562;
+
+  --color-2: #7eb562;
+  --color-3: #bdc2f9;
 }

@@ -1,7 +1,10 @@
+@layer component, app;
+
 body {
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: var(--theme-background);
+  color: var(--theme-primary-text);
   font-family: "Roboto", "open sans", helvetica, sans-serif;
+  font-weight: 400;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -11,4 +14,8 @@ body {
 html {
   position: relative;
   min-height: 100%;
+}
+
+li {
+  list-style: none;
 }

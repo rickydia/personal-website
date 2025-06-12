@@ -1,0 +1,17 @@
+@layer component {
+  .link {
+    border-radius: 4px;
+    color: var(--theme-primary-text);
+    padding: 4px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--theme-primary-text-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--theme-outline);
+    }
+  }
+}

@@ -10,9 +10,10 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { NavMenu } from "~/components/NavMenu";
 import type { Route } from "./+types/root";
 
-import "./styles.module.css";
+import "./global.css";
 import {
   getThemeScript,
   Theme,
@@ -108,6 +109,7 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
+      <NavMenu />
       <Outlet />
     </ThemeContext.Provider>
   );
