@@ -1,4 +1,12 @@
 @layer component {
+  .button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+  }
+
   .header {
     align-items: center;
     background-color: inherit;
@@ -13,8 +21,20 @@
   .list {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 32px;
     margin: 0;
     padding: 0;
+  }
+
+  .svg {
+    fill: var(--theme-primary-text);
+    height: 48px;
+    stroke: var(--theme-primary-text);
+    width: 32px;
+
+    &:hover {
+      fill: var(--theme-primary-text-hover);
+      stroke: var(--theme-primary-text-hover);
+    }
   }
 }
