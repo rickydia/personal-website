@@ -110,7 +110,9 @@ export default function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <NavMenu />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </ThemeContext.Provider>
   );
 }

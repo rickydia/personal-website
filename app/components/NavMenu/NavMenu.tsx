@@ -1,6 +1,8 @@
 import { useContext } from "react";
 
 import { Theme, ThemeContext } from "~/theme";
+import DarkSwitch from "~/assets/darkSwitch.svg?react";
+import LightSwitch from "~/assets/lightSwitch.svg?react";
 
 import css from "./styles.module.css";
 import { NavItem } from "./NavItem";
@@ -19,7 +21,17 @@ export function NavMenu() {
           <NavItem href="/photos">Photos</NavItem>
           <NavItem href="#contact">Contact</NavItem>
           <li>
-            <button onClick={toggleTheme}>{theme}</button>
+            <button
+              className={css.button}
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+            >
+              {theme === Theme.DARK ? (
+                <DarkSwitch className={css.svg} aria-label="Dark theme" />
+              ) : (
+                <LightSwitch className={css.svg} aria-label="Light theme" />
+              )}
+            </button>
           </li>
         </ul>
       </nav>
