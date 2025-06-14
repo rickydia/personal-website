@@ -1,0 +1,66 @@
+/* Base typography styles */
+.typography {
+  margin: 0;
+  font-family: "Roboto", "open sans", helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.00938em;
+  color: var(--theme-primary-text);
+}
+
+/* Variant styles */
+.variant-default {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.variant-default-bold {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.variant-heading {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -0.00833em;
+}
+
+.variant-subheading {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0em;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .variant-heading {
+    font-size: 32px;
+  }
+
+  .variant-subheading {
+    font-size: 24px;
+  }
+}
+
+/* Focus styles for accessibility */
+.typography:focus-visible {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .color-primary {
+    color: #0d47a1;
+  }
+
+  .color-secondary {
+    color: #880e4f;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .typography {
+    transition: none;
+  }
+}

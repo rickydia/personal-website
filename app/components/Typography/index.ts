@@ -1,1 +1,1 @@
-export { Typography } from "./Typography";
+export { Typography, TypographyVariant, TypographyElement } from "./Typography";

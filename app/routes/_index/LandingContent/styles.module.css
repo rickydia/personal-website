@@ -1,0 +1,16 @@
+@layer app {
+  .container {
+    display: flex;
+    height: calc(100vh - var(--app-header-height));
+  }
+
+  .content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 50%;
+    justify-content: flex-start;
+    margin: auto;
+  }
+}
