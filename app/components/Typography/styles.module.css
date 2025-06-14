@@ -32,13 +32,11 @@
 
 /* Responsive typography */
 @media (max-width: 768px) {
-  .variant-heading,
-  .variant-h1 {
+  .variant-heading {
     font-size: 32px;
   }
 
-  .variant-subheading,
-  .variant-h2 {
+  .variant-subheading {
     font-size: 24px;
   }
 }
