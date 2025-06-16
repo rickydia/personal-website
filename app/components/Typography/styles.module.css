@@ -10,10 +10,10 @@
 
   /* Variant styles */
   .variant-default {
+    color: rgb(from var(--theme-primary-text) r g b / 0.8);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    opacity: 0.8;
   }
 
   .variant-default-bold {
