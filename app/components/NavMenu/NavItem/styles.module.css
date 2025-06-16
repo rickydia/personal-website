@@ -1,6 +1,14 @@
-@layer component {
+@layer composed-component {
   .item {
     align-items: center;
     display: flex;
+  }
+
+  .text {
+    color: var(--theme-primary-text);
+
+    &:hover {
+      color: var(--theme-primary-text-hover);
+    }
   }
 }

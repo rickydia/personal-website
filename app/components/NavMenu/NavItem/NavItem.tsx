@@ -14,7 +14,7 @@ export function NavItem({ children, href }: PropsWithChildren<NavItemProps>) {
     <li className={css.item}>
       {href ? (
         <AppLink href={href}>
-          <Typography variant={TypographyVariant.DEFAULT}>
+          <Typography variant={TypographyVariant.DEFAULT} className={css.text}>
             {children}
           </Typography>
         </AppLink>

@@ -2,7 +2,7 @@ import { Typography, TypographyVariant } from "~/components/Typography";
 
 import css from "./styles.module.css";
 
-export function LandingContent() {
+export function LandingSection() {
   return (
     <section className={css.container}>
       <div className={css.content}>

@@ -1,4 +1,4 @@
-@layer component, app;
+@layer component, composed-component, app;
 
 body {
   background-color: var(--theme-background);
