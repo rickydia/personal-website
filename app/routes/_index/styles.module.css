@@ -1,10 +1,15 @@
 @layer app {
   .container {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    justify-content: flex-start;
-    padding: 0px var(--app-horizontal-padding);
+    padding: 0 20vw 25vh;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 var(--app-horizontal-padding);
+    }
   }
 }

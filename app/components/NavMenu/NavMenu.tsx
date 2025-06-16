@@ -16,10 +16,10 @@ export function NavMenu() {
     <header className={css.header}>
       <nav>
         <ul className={css.list}>
-          <NavItem href="#about">About</NavItem>
-          <NavItem href="#experience">Experience</NavItem>
+          <NavItem href="/#about">About</NavItem>
+          <NavItem href="/#experience">Experience</NavItem>
           <NavItem href="/photos">Photos</NavItem>
-          <NavItem href="#contact">Contact</NavItem>
+          <NavItem href="/#contact">Contact</NavItem>
           <li>
             <button
               className={css.button}
