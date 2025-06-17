@@ -1,4 +1,4 @@
-import { Typography, TypographyVariant } from "~/components/Typography";
+import { Typography, TypographyVariant } from "~/components";
 
 import css from "./styles.module.css";
 

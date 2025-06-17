@@ -1,7 +1,8 @@
 import type { Route } from "./+types/route";
 
-import { LandingSection } from "./LandingSection";
 import { AboutMeSection } from "./AboutMeSection";
+import { ExperienceSection } from "./ExperienceSection";
+import { LandingSection } from "./LandingSection";
 import css from "./styles.module.css";
 
 export function meta({}: Route.MetaArgs) {
@@ -16,6 +17,7 @@ export default function Home() {
     <div className={css.container}>
       <LandingSection />
       <AboutMeSection />
+      <ExperienceSection />
     </div>
   );
 }

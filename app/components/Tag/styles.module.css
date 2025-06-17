@@ -1,0 +1,9 @@
+@layer component {
+  .tag {
+    background-color: var(--theme-tag-background);
+    border-radius: 8px;
+    color: var(--theme-tag-text);
+    padding: 4px 8px;
+    width: fit-content;
+  }
+}
