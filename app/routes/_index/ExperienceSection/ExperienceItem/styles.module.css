@@ -1,0 +1,35 @@
+@layer app {
+  .container {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+  }
+
+  .dateText {
+    font-style: italic;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      gap: 8px;
+      grid-template-columns: 1fr;
+    }
+
+    .description {
+      gap: 4px;
+    }
+  }
+}

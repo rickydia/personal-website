@@ -3,7 +3,7 @@
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 25vh;
     padding: 0 20vw 25vh;
   }
 

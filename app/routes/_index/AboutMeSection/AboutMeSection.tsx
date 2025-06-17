@@ -1,11 +1,14 @@
-import { Typography } from "~/components";
-import { TypographyVariant } from "~/components/Typography";
+import {
+  Typography,
+  TypographyVariant,
+  ABOUT_ME_SECTION_ID,
+} from "~/components";
 
 import css from "./styles.module.css";
 
 export function AboutMeSection() {
   return (
-    <section className={css.container}>
+    <section className={css.container} id={ABOUT_ME_SECTION_ID}>
       <Typography variant={TypographyVariant.HEADING}>
         A little bit about me
       </Typography>

@@ -12,6 +12,8 @@
   --theme-primary-text: #000000;
   --theme-primary-text-hover: #50451e;
   --theme-outline: #7eb562;
+  --theme-tag-background: #e0c253;
+  --theme-tag-text: #000000;
 
   --color-2: #7eb562;
   --color-3: #bdc2f9;
@@ -25,6 +27,8 @@
   --theme-primary-text: #ffffff;
   --theme-primary-text-hover: #e0c253;
   --theme-outline: #7eb562;
+  --theme-tag-background: #e0c253;
+  --theme-tag-text: #000000;
 
   --color-2: #7eb562;
   --color-3: #bdc2f9;
