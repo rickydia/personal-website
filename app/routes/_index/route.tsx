@@ -1,6 +1,7 @@
 import type { Route } from "./+types/route";
 
 import { AboutMeSection } from "./AboutMeSection";
+import { ContactSection } from "./ContactSection";
 import { ExperienceSection } from "./ExperienceSection";
 import { LandingSection } from "./LandingSection";
 import { PhotosSection } from "./PhotosSection";
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutMeSection />
       <ExperienceSection />
       <PhotosSection />
+      <ContactSection />
     </div>
   );
 }

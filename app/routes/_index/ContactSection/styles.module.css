@@ -1,0 +1,46 @@
+@layer app {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  .icon {
+    color: var(--theme-primary-text);
+    height: 32px;
+    width: 32px;
+  }
+
+  .link {
+    align-items: center;
+    border-radius: 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+    width: 100%;
+
+    &:hover {
+      background-color: var(--theme-outline);
+    }
+  }
+
+  .or {
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+  }
+}
