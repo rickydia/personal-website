@@ -15,7 +15,7 @@ export function ExperienceItem({
   description,
   tags,
 }: ExperienceItemProps) {
-  const baseKey = `${title.toLowerCase().replace(" ", "_")}-description`;
+  const baseKey = `${title.toLowerCase().replace(" ", "_")}`;
   return (
     <div className={css.container}>
       <Typography variant={TypographyVariant.DEFAULT} className={css.dateText}>
