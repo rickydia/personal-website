@@ -6,9 +6,9 @@
 
   .text {
     color: var(--theme-primary-text);
+  }
 
-    &:hover {
-      color: var(--theme-primary-text-hover);
-    }
+  .item:hover .text {
+    color: var(--theme-primary-text-hover);
   }
 }
