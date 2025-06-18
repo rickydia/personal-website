@@ -1,3 +1,5 @@
+@layer component, composed-component, app;
+
 :root {
   /***************************************
    * Shared app-wide variables
