@@ -3,8 +3,8 @@
     align-items: center;
     display: flex;
     gap: 16px;
-    justify-content: center;
     height: var(--app-footer-height);
+    justify-content: center;
   }
 
   @media (max-width: 768px) {
