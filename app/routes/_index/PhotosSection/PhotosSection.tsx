@@ -1,13 +1,18 @@
 import { RiArrowRightUpLine } from "@remixicon/react";
 
-import { AppLink, Typography, TypographyVariant } from "~/components";
+import {
+  AppLink,
+  PHOTOS_SECTION_ID,
+  Typography,
+  TypographyVariant,
+} from "~/components";
 
 import { Photo } from "./Photo";
 import css from "./styles.module.css";
 
 export function PhotosSection() {
   return (
-    <section className={css.container}>
+    <section id={PHOTOS_SECTION_ID} className={css.container}>
       <Typography variant={TypographyVariant.HEADING}>
         Fun photos and memories
       </Typography>
@@ -30,7 +35,12 @@ export function PhotosSection() {
         </div>
       </div>
 
-      <AppLink to={"/photos"} className={css.link}>
+      <AppLink
+        to="https://www.instagram.com/smallpic.rick"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={css.link}
+      >
         <Typography
           variant={TypographyVariant.DEFAULT_BOLD}
           className={css.linkText}
