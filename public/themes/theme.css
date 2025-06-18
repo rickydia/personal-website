@@ -4,6 +4,8 @@
    ***************************************/
   --app-header-height: 100px;
   --app-horizontal-padding: 40px;
+  --app-footer-height: 100px;
+  --app-footer-height-mobile: 50px;
 
   /***************************************
    * Light theme variables 

@@ -1,4 +1,5 @@
 export { AppLink, type AppLinkProps } from "./AppLink";
+export { Footer } from "./Footer";
 export {
   NavMenu,
   ABOUT_ME_SECTION_ID,
