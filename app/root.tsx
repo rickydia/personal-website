@@ -10,7 +10,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 
-import { NavMenu } from "~/components/NavMenu";
+import { Footer, NavMenu } from "~/components";
 import type { Route } from "./+types/root";
 
 import "./global.css";
@@ -113,6 +113,7 @@ export default function App() {
       <main>
         <Outlet />
       </main>
+      <Footer />
     </ThemeContext.Provider>
   );
 }

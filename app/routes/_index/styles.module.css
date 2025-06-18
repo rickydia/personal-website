@@ -9,7 +9,7 @@
 
   @media (max-width: 768px) {
     .container {
-      padding: 0 var(--app-horizontal-padding) 25vh;
+      padding: 0 var(--app-horizontal-padding) 15vh;
     }
   }
 }

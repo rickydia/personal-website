@@ -1,0 +1,15 @@
+@layer composed-component {
+  .footer {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    height: var(--app-footer-height);
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      height: var(--app-footer-height-mobile);
+    }
+  }
+}
