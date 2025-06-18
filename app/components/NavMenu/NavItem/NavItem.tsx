@@ -13,7 +13,7 @@ export function NavItem({ children, href }: PropsWithChildren<NavItemProps>) {
   return (
     <li className={css.item}>
       {href ? (
-        <AppLink href={href}>
+        <AppLink to={href}>
           <Typography variant={TypographyVariant.DEFAULT} className={css.text}>
             {children}
           </Typography>

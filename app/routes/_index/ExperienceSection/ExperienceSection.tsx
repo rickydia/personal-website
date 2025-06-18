@@ -14,7 +14,9 @@ import css from "./styles.module.css";
 export function ExperienceSection() {
   return (
     <section className={css.container} id={EXPERIENCE_SECTION_ID}>
-      <Typography variant={TypographyVariant.HEADING}>Experience</Typography>
+      <Typography variant={TypographyVariant.HEADING}>
+        Some of the stuff I've done
+      </Typography>
       <div className={css.content}>
         {EXPERIENCE_DATA.map((experience) => (
           <ExperienceItem key={experience.title} {...experience} />
