@@ -1,17 +1,3 @@
-@layer component, composed-component, app;
-
-@layer component {
-  /* Ensure component layer is created in correct order */
-}
-
-@layer composed-component {
-  /* Ensure composed-component layer is created in correct order */
-}
-
-@layer app {
-  /* Ensure app layer is created in correct order */
-}
-
 :root {
   /***************************************
    * Shared app-wide variables

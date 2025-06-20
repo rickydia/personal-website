@@ -1,3 +1,5 @@
+import "./global.css";
+
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useState, useCallback } from "react";
@@ -12,8 +14,6 @@ import {
 
 import { Footer, NavMenu } from "~/components";
 import type { Route } from "./+types/root";
-
-import "./global.css";
 import {
   getThemeScript,
   Theme,
