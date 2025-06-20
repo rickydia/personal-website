@@ -1,3 +1,5 @@
+@layer component, composed-component, app;
+
 body {
   background-color: var(--theme-background);
   color: var(--theme-primary-text);
