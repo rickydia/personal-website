@@ -1,12 +1,17 @@
 import { RiLinkedinBoxLine, RiMailLine } from "@remixicon/react";
 
-import { AppLink, Typography, TypographyVariant } from "~/components";
+import {
+  AppLink,
+  CONTACT_SECTION_ID,
+  Typography,
+  TypographyVariant,
+} from "~/components";
 
 import css from "./styles.module.css";
 
 export function ContactSection() {
   return (
-    <section className={css.container}>
+    <section className={css.container} id={CONTACT_SECTION_ID}>
       <Typography variant={TypographyVariant.HEADING}>
         Let's get in touch!
       </Typography>
