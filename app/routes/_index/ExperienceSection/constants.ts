@@ -2,22 +2,24 @@ import type { ExperienceItemProps } from "./ExperienceItem";
 
 export const EXPERIENCE_DATA: ExperienceItemProps[] = [
   {
-    dates: ["Jan 2025", "Present"],
-    title: "Senior Software Engineer",
-    description: "Description 1",
-    tags: ["React", "Node.js", "TypeScript"],
+    dates: ["September 2022", "May 2025"],
+    title: "Senior Software Engineer I",
+    description:
+      "As a founding engineer on Censys's new flagship product, I helped lead a complete rebuild of the legacy platform—establishing front-end standards and design systems to ensure long-term scalability. I spearheaded key initiatives like a frontend SAML integration, RBAC for personal access tokens, and a major redesign of the host history log page, all built with Remix and TypeScript to support a new product-led growth motion that drove over 110 customer conversions within the first month. Beyond feature development, I overhauled our bug triage system to reduce lingering critical issues by over 300%, and led onboarding efforts that cut new engineer ramp-up time from two weeks to just three days.",
+    tags: ["Remix", "React", "TypeScript", "Node.js"],
   },
   {
-    dates: ["January 2022", "September 2024"],
+    dates: ["May 2021", "September 2022"],
     title: "Software Engineer II",
     description:
-      "Description 1. Lorem ipsumLorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsumLorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
-    tags: ["React", "Node.js", "TypeScript"],
+      "At Censys, I collaborated directly with customers to identify major gaps in our Risks feature—like unclear asset exposure and insufficient remediation guidance—and led a comprehensive redesign that significantly improved user confidence and engagement. I also accelerated our end-to-end testing pipeline by implementing parallelization strategies, reducing test run time by nearly 400%. To further improve engineering velocity, I modernized over 40 legacy components by developing a developer-friendly, accessible component library that was adopted across multiple teams.",
+    tags: ["React", "TypeScript", "Node.js", "Scala", "Go"],
   },
   {
-    dates: ["Sep 2020", "May 2022"],
+    dates: ["May 2020", "May 2021"],
     title: "Software Engineer I",
-    description: "Description 3.",
-    tags: ["Tag 1", "Tag 2"],
+    description:
+      "Earlier in my time at Censys, I aligned our Software Development Kits with public APIs, doubling customer adoption rates and streamlining integration workflows. I also built two internet-facing service scanners that uncovered millions of new service fingerprints, significantly expanding our global scan coverage. Beyond engineering, I partnered with leadership to launch the company’s first Employee Resource Group (ERG) and laid the foundation for future ERGs, helping foster a more inclusive and supportive workplace culture.",
+    tags: ["Go", "Python", "TypeScript", "React", "Node.js"],
   },
 ];
