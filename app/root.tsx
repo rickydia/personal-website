@@ -59,9 +59,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
          * Sets the theme based on the user's preference or the theme they have
          * selected in their localStorage.
          */}
-        <Links />
         <script dangerouslySetInnerHTML={{ __html: getThemeScript() }} />
         <Meta />
+        <Links />
         <SpeedInsights />
         <Analytics />
       </head>
