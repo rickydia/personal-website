@@ -11,4 +11,10 @@
   .item:hover .text {
     color: var(--theme-primary-text-hover);
   }
+
+  @media (max-width: 768px) {
+    .item {
+      display: none;
+    }
+  }
 }
