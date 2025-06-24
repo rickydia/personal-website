@@ -1,0 +1,37 @@
+@layer component {
+  .container {
+    display: inline-block;
+    position: relative;
+  }
+
+  .sparkle {
+    display: block;
+    position: absolute;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: sparkle 700ms forwards;
+    }
+  }
+
+  .text {
+    position: relative;
+  }
+
+  @keyframes sparkle {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sparkle {
+      animation: none;
+    }
+  }
+}

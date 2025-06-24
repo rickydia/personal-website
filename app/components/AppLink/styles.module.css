@@ -3,6 +3,7 @@
     border-radius: 4px;
     color: var(--theme-primary-text);
     cursor: pointer;
+    display: flex;
     padding: 4px;
     text-decoration: none;
 

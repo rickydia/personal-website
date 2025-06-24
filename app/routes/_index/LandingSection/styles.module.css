@@ -13,4 +13,12 @@
     justify-content: flex-start;
     margin: auto;
   }
+
+  .highlightHelp {
+    color: var(--theme-highlight-1);
+  }
+
+  .highlightSoftwareEngineer {
+    color: var(--theme-highlight-2);
+  }
 }
