@@ -1,0 +1,41 @@
+@layer component {
+  .container {
+    transition: opacity 1s ease-in-out;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .visible {
+    opacity: 1;
+    animation: slide-in 1s ease-in-out;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(100vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .container {
+      transition: none;
+    }
+
+    .visible {
+      animation: none;
+    }
+
+    .hidden {
+      transform: none;
+    }
+
+    .visible {
+      transform: none;
+    }
+  }
+}

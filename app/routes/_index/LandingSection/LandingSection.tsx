@@ -1,4 +1,4 @@
-import { Typography, TypographyVariant } from "~/components";
+import { Sparkle, Typography, TypographyVariant } from "~/components";
 
 import css from "./styles.module.css";
 
@@ -10,11 +10,17 @@ export function LandingSection() {
         <Typography variant={TypographyVariant.HEADING}>
           Ricky Diaz Gomez,
         </Typography>
-        <Typography variant={TypographyVariant.DEFAULT}>
-          a full-stack software engineer.
-        </Typography>
+        <Sparkle>
+          <Typography
+            variant={TypographyVariant.DEFAULT}
+            className={css.highlightSoftwareEngineer}
+          >
+            a full-stack software engineer.
+          </Typography>
+        </Sparkle>
         <Typography variant={TypographyVariant.SUBHEADING}>
-          I enjoy doing and building things that help people.
+          I enjoy doing and building things that{" "}
+          <span className={css.highlightHelp}>help</span> people.
         </Typography>
       </div>
     </section>

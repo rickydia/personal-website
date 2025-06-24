@@ -1,0 +1,44 @@
+@layer component {
+  .icon {
+    color: var(--theme-primary-text);
+    font-size: 24px;
+  }
+
+  .link {
+    --scale-factor: 1.05;
+
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    width: fit-content;
+
+    &:hover {
+      animation: expand 0.08s ease-in-out;
+      transform: scale(var(--scale-factor));
+
+      .icon {
+        color: var(--theme-primary-text-hover);
+      }
+
+      .linkText {
+        color: var(--theme-primary-text-hover);
+      }
+    }
+  }
+
+  @keyframes expand {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(var(--scale-factor));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link {
+      animation: none;
+    }
+  }
+}

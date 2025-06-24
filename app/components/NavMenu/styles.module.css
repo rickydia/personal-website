@@ -5,6 +5,10 @@
     cursor: pointer;
     display: flex;
     padding: 0;
+
+    &:focus-visible {
+      outline: 2px dashed var(--theme-outline);
+    }
   }
 
   .header {
