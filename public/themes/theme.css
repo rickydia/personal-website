@@ -19,6 +19,9 @@
   --theme-tag-text: #000000;
   --theme-accent-background: #7eb562;
   --theme-highlight-1: #bdc2f9;
+  --theme-highlight-2: #e0c253;
+  --theme-highlight-3: #7eb562;
+  --theme-highlight-4: #faed9e;
 }
 
 :root[data-theme="dark"] {
