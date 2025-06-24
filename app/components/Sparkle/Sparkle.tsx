@@ -1,6 +1,7 @@
 import { useRef, useState, type PropsWithChildren } from "react";
 
 import SparkleIcon from "~/assets/sparkle.svg?react";
+import { useIsMounted } from "~/utils/useIsMounted";
 import { useIsVisible } from "~/utils/useIsVisible";
 import { usePrefersReducedMotion } from "~/utils/usePrefersReducedMotion";
 import { useRandomInterval } from "~/utils/useRandomInterval";
@@ -10,9 +11,11 @@ import { generateSparkle } from "./utils";
 
 // This function is largely inspired by https://www.joshwcomeau.com/react/animated-sparkles-in-react/
 export function Sparkle({ children }: PropsWithChildren) {
+  const isMountedFn = useIsMounted();
   const ref = useRef<HTMLSpanElement>(null);
+  const isMounted = isMountedFn();
   const [sparkles, setSparkles] = useState(() => {
-    return Array.from({ length: 3 }, () => generateSparkle());
+    return Array.from({ length: 3 }, () => generateSparkle(isMounted));
   });
 
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -20,7 +23,7 @@ export function Sparkle({ children }: PropsWithChildren) {
 
   useRandomInterval(
     () => {
-      const sparkle = generateSparkle();
+      const sparkle = generateSparkle(isMounted);
       const now = Date.now();
       const nextSparkles = sparkles.filter((sp) => {
         const delta = now - sp.createdAt;
@@ -29,9 +32,10 @@ export function Sparkle({ children }: PropsWithChildren) {
       nextSparkles.push(sparkle);
       setSparkles(nextSparkles);
     },
-    prefersReducedMotion || !isVisible ? null : 50,
-    prefersReducedMotion || !isVisible ? null : 450
+    !isMounted || prefersReducedMotion || !isVisible ? null : 50,
+    !isMounted || prefersReducedMotion || !isVisible ? null : 450
   );
+
   return (
     <span className={css.container} ref={ref}>
       {sparkles.map((sparkle) => (
