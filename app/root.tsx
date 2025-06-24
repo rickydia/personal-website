@@ -2,7 +2,7 @@ import "./global.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import {
   isRouteErrorResponse,
   Links,
@@ -83,10 +83,20 @@ export default function App() {
     if (typeof window === "undefined") {
       return Theme.DARK;
     }
+
+    // First, try to read from the data-theme attribute set by getThemeScript
+    const dataTheme = document.documentElement.getAttribute("data-theme");
+    if (dataTheme && isValidTheme(dataTheme)) {
+      return dataTheme;
+    }
+
+    // Fallback to localStorage
     const storedTheme = localStorage.getItem(THEME_LOCAL_STORAGE_KEY);
     if (storedTheme && isValidTheme(storedTheme)) {
       return storedTheme;
     }
+
+    // Final fallback to system preference
     return window.matchMedia("(prefers-color-scheme: light)").matches
       ? Theme.LIGHT
       : Theme.DARK;

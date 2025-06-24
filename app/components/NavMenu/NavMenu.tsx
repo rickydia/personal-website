@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useCallback, useContext } from "react";
 
-import { Theme, ThemeContext } from "~/theme";
 import DarkSwitch from "~/assets/darkSwitch.svg?react";
 import LightSwitch from "~/assets/lightSwitch.svg?react";
+import { Theme, ThemeContext } from "~/theme";
+import { useIsMounted } from "~/utils/useIsMounted";
 
 import { NavItem } from "./NavItem";
 import {
@@ -15,9 +16,12 @@ import css from "./styles.module.css";
 
 export function NavMenu() {
   const { theme, setTheme } = useContext(ThemeContext);
-  const toggleTheme = () => {
+  const isMounted = useIsMounted();
+
+  const toggleTheme = useCallback(() => {
     setTheme(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
-  };
+  }, [theme, setTheme]);
+
   return (
     <header className={css.header}>
       <nav>
@@ -32,10 +36,10 @@ export function NavMenu() {
               onClick={toggleTheme}
               aria-label="Toggle theme"
             >
-              {theme === Theme.DARK ? (
-                <DarkSwitch className={css.svg} aria-label="Dark theme" />
-              ) : (
+              {isMounted() && theme === Theme.LIGHT ? (
                 <LightSwitch className={css.svg} aria-label="Light theme" />
+              ) : (
+                <DarkSwitch className={css.svg} aria-label="Dark theme" />
               )}
             </button>
           </li>
