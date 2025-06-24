@@ -36,6 +36,11 @@
       animation: expand 0.08s ease-in-out;
       background-color: var(--theme-accent-background);
       transform: scale(var(--scale-factor));
+
+      .icon,
+      .linkText {
+        color: var(--theme-accent-foreground);
+      }
     }
   }
 

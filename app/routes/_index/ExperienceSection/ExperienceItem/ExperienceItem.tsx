@@ -22,7 +22,10 @@ export function ExperienceItem({
         {dates[0]} - {dates[1]}
       </Typography>
       <div className={css.description}>
-        <Typography variant={TypographyVariant.DEFAULT_BOLD}>
+        <Typography
+          variant={TypographyVariant.DEFAULT_BOLD}
+          className={css.title}
+        >
           {title}
         </Typography>
         <Typography variant={TypographyVariant.DEFAULT}>

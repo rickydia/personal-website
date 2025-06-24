@@ -7,13 +7,14 @@ import { Typography, TypographyVariant } from "../Typography";
 interface ExternalLinkProps {
   to: string;
   text: string;
+  className?: string;
 }
 
-export function ExternalLink({ to, text }: ExternalLinkProps) {
+export function ExternalLink({ to, text, className }: ExternalLinkProps) {
   return (
     <AppLink
       to={to}
-      className={css.link}
+      className={`${css.link} ${className}`}
       target="_blank"
       rel="noopener noreferrer"
       reloadDocument
