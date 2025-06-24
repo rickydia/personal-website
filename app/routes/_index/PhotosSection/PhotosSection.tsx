@@ -15,7 +15,8 @@ export function PhotosSection() {
     <section id={PHOTOS_SECTION_ID} className={css.container}>
       <TransitionIn>
         <Typography variant={TypographyVariant.HEADING}>
-          <Sparkle>Fun</Sparkle> photos and memories
+          <Sparkle>Fun</Sparkle> photos and{" "}
+          <span className={css.memories}>memories</span>
         </Typography>
 
         <div className={css.photosContainer}>

@@ -15,7 +15,13 @@
     margin-top: 16px;
   }
 
+  .link {
+    display: inline-flex;
+    gap: 4px;
+    margin: 0px;
+  }
+
   .highlight {
-    color: var(--theme-highlight-2);
+    color: var(--theme-highlight-3);
   }
 }

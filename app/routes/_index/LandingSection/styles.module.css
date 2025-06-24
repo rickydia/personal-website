@@ -15,10 +15,10 @@
   }
 
   .highlightHelp {
-    color: var(--theme-highlight-1);
+    color: var(--theme-highlight-2);
   }
 
   .highlightSoftwareEngineer {
-    color: var(--theme-highlight-2);
+    color: var(--theme-highlight-1);
   }
 }

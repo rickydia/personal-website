@@ -17,6 +17,7 @@
   --theme-outline: #7eb562;
   --theme-tag-background: #e0c253;
   --theme-tag-text: #000000;
+  --theme-accent-foreground: #463916;
   --theme-accent-background: #7eb562;
   --theme-highlight-1: #bdc2f9;
   --theme-highlight-2: #e0c253;
@@ -28,16 +29,17 @@
   /***************************************
    * Dark theme variables
    ***************************************/
-  --theme-background: #292a36;
-  --theme-primary-text: #ffffff;
-  --theme-primary-text-hover: #e0c253;
+  --theme-background: #364370;
+  --theme-primary-text: #f0e4c5;
+  --theme-primary-text-hover: #ffd498;
   --theme-secondary-text: rgb(from var(--theme-primary-text) r g b / 0.8);
-  --theme-outline: #bdc2f9;
-  --theme-tag-background: #faed9e;
-  --theme-tag-text: #000000;
-  --theme-accent-background: #7eb562;
-  --theme-highlight-1: #7eb562;
-  --theme-highlight-2: #e0c253;
+  --theme-outline: #c5cff0;
+  --theme-tag-background: #fff091;
+  --theme-tag-text: #704236;
+  --theme-accent-foreground: #fff9e9;
+  --theme-accent-background: #808cb0;
+  --theme-highlight-1: #ceff95;
+  --theme-highlight-2: #ffb5b5;
   --theme-highlight-3: #7eb562;
-  --theme-highlight-4: #faed9e;
+  --theme-highlight-4: #fff5b3;
 }

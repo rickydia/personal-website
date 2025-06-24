@@ -21,7 +21,10 @@ export function ContactSection() {
         <div className={css.content}>
           <AppLink to="mailto:rickydg@proton.me" className={css.link}>
             <RiMailLine className={css.icon} />
-            <Typography variant={TypographyVariant.SUBHEADING}>
+            <Typography
+              variant={TypographyVariant.SUBHEADING}
+              className={css.linkText}
+            >
               Email Me
             </Typography>
           </AppLink>
@@ -38,7 +41,10 @@ export function ContactSection() {
             className={css.link}
           >
             <RiLinkedinBoxLine className={css.icon} />
-            <Typography variant={TypographyVariant.SUBHEADING}>
+            <Typography
+              variant={TypographyVariant.SUBHEADING}
+              className={css.linkText}
+            >
               DM Me
             </Typography>
           </AppLink>
