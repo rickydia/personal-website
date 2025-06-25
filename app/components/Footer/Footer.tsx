@@ -16,6 +16,7 @@ export function Footer() {
           to="https://www.linkedin.com/in/rickydg"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn profile link"
         >
           <RiLinkedinBoxLine />
         </AppLink>
@@ -23,6 +24,7 @@ export function Footer() {
           to="https://www.instagram.com/smallpic.rick"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Instagram profile link"
         >
           <RiInstagramLine />
         </AppLink>
@@ -30,6 +32,7 @@ export function Footer() {
           to="https://github.com/rickydia"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub profile link"
         >
           <RiGithubLine />
         </AppLink>
