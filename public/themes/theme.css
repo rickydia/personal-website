@@ -10,19 +10,20 @@
   /***************************************
    * Light theme variables 
    ***************************************/
-  --theme-background: #bdc2f9;
-  --theme-primary-text: #000000;
-  --theme-primary-text-hover: #50451e;
+  --theme-background: #ffd8d8;
+  --theme-primary-text: #330606;
+  --theme-primary-text-hover: #396480;
   --theme-secondary-text: rgb(from var(--theme-primary-text) r g b / 0.8);
-  --theme-outline: #7eb562;
-  --theme-tag-background: #e0c253;
-  --theme-tag-text: #000000;
+  --theme-outline: #185529;
+  --theme-tag-background: #803980;
+  --theme-tag-text: #fffed9;
   --theme-accent-foreground: #463916;
-  --theme-accent-background: #7eb562;
-  --theme-highlight-1: #bdc2f9;
-  --theme-highlight-2: #e0c253;
-  --theme-highlight-3: #7eb562;
-  --theme-highlight-4: #faed9e;
+  --theme-accent-background: #fff7d9;
+  --theme-sparkle: #398065;
+  --theme-highlight-1: #2a5978;
+  --theme-highlight-2: #418656;
+  --theme-highlight-3: #ca9a41;
+  --theme-highlight-4: #394080;
 }
 
 :root[data-theme="dark"] {
@@ -38,6 +39,7 @@
   --theme-tag-text: #704236;
   --theme-accent-foreground: #fff9e9;
   --theme-accent-background: #808cb0;
+  --theme-sparkle: #ffe894;
   --theme-highlight-1: #ceff95;
   --theme-highlight-2: #ffb5b5;
   --theme-highlight-3: #7eb562;
