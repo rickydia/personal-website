@@ -1,8 +1,6 @@
-# Welcome to React Router!
+# Personal Website
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+This is my personal website built with React Router, featuring server-side rendering and a custom theme system.
 
 ## Features
 
@@ -10,8 +8,10 @@ A modern, production-ready template for building full-stack React applications u
 - ⚡️ Hot Module Replacement (HMR)
 - 📦 Asset bundling and optimization
 - 🔄 Data loading and mutations
+- 🎨 Custom theme system with light/dark modes
 - 🔒 TypeScript by default
-- 📖 [React Router docs](https://reactrouter.com/)
+- 📱 Responsive design
+- 📊 Analytics and performance insights
 
 ## Getting Started
 
@@ -41,10 +41,11 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+## Theme System
 
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fremix-run%2Freact-router-templates%2Ftree%2Fmain%2Fvercel&project-name=my-react-router-app&repository-name=my-react-router-app)
+This project includes a custom theme system that supports:
 
----
-
-Built with ❤️ using React Router.
+- Light and dark theme variants
+- CSS custom properties for consistent styling
+- Dynamic theme switching
+- Carefully crafted color palettes for both themes
