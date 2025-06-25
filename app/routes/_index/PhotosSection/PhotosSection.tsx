@@ -22,18 +22,18 @@ export function PhotosSection() {
         <div className={css.photosContainer}>
           <div className={css.photosColumn}>
             <Photo name="anya-1" />
-            <Photo name="kira-1" />
+            <Photo name="birds-1" />
             <Photo name="elle-1" />
           </div>
           <div className={css.photosColumn}>
-            <Photo name="elle-1" />
-            <Photo name="anya-1" />
-            <Photo name="kira-1" />
+            <Photo name="moher-1" />
+            <Photo name="elle-2" />
+            <Photo name="plants-1" />
           </div>
           <div className={css.photosColumn}>
+            <Photo name="ricky-1" />
+            <Photo name="vatican-1" />
             <Photo name="kira-1" />
-            <Photo name="elle-1" />
-            <Photo name="anya-1" />
           </div>
         </div>
 

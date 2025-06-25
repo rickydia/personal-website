@@ -9,7 +9,7 @@ export function Photo({ name }: PhotoProps) {
     <img
       className={css.photo}
       loading="lazy"
-      src={`/photos/${name}.jpg`}
+      src={`/photos/${name}.webp`}
       alt="Photo 1"
     />
   );
