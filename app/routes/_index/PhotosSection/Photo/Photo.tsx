@@ -2,15 +2,16 @@ import css from "./styles.module.css";
 
 interface PhotoProps {
   name: string;
+  alt: string;
 }
 
-export function Photo({ name }: PhotoProps) {
+export function Photo({ name, alt }: PhotoProps) {
   return (
     <img
       className={css.photo}
       loading="lazy"
-      src={`/photos/${name}.jpg`}
-      alt="Photo 1"
+      src={`/photos/${name}.webp`}
+      alt={alt}
     />
   );
 }

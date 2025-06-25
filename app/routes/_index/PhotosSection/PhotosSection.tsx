@@ -21,19 +21,19 @@ export function PhotosSection() {
 
         <div className={css.photosContainer}>
           <div className={css.photosColumn}>
-            <Photo name="anya-1" />
-            <Photo name="kira-1" />
-            <Photo name="elle-1" />
+            <Photo name="anya-1" alt="Photo of Anya holding a drink" />
+            <Photo name="birds-1" alt="Photo of birds flying in the sky" />
+            <Photo name="elle-1" alt="Photo of Elle on her phone" />
           </div>
           <div className={css.photosColumn}>
-            <Photo name="elle-1" />
-            <Photo name="anya-1" />
-            <Photo name="kira-1" />
+            <Photo name="moher-1" alt="Photo of Cliffs of Moher in Ireland" />
+            <Photo name="elle-2" alt="Photo of Elle walking on a street" />
+            <Photo name="plants-1" alt="Photo of a large cactus" />
           </div>
           <div className={css.photosColumn}>
-            <Photo name="kira-1" />
-            <Photo name="elle-1" />
-            <Photo name="anya-1" />
+            <Photo name="ricky-1" alt="Photo of Ricky outside a castle" />
+            <Photo name="vatican-1" alt="Photo of Vatican City" />
+            <Photo name="kira-1" alt="Photo of Kira in a ghost costume" />
           </div>
         </div>
 
