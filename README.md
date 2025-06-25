@@ -2,6 +2,8 @@
 
 This is my personal website built with React Router, featuring server-side rendering and a custom theme system.
 
+The website can be viewed at [rickybeepboop.dev](https://rickybeepboop.dev/).
+
 ## Features
 
 - 🚀 Server-side rendering
