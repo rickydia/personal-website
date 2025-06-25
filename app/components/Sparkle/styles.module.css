@@ -5,6 +5,7 @@
   }
 
   .sparkle {
+    color: var(--theme-sparkle);
     display: block;
     position: absolute;
 
